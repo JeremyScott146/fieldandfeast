@@ -168,15 +168,23 @@ article ul {
 }
 
 /* gallery */
-.gallery {
+.gallery ul {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 1rem;
-	margin: 1rem none;
+	margin-top: 1rem;
+	padding: 0;
 }
 
-.gallery img {
+.gallery li {
+	list-style: none;
+}
+
+.gallery figure {
+	background-color: var(--linen);
+	padding-bottom: 0.25rem;
 	border-radius: 6px;
+	box-shadow: 0 4px 6px silver;
 }
 
 .gallery figcaption {
@@ -192,6 +200,7 @@ article ul {
 	color: var(--linen);
 	text-align: center;
 	padding: 0.65rem;
+	margin-top: 1rem;
 	border-radius: 6px;
 	text-decoration: none;
 	font-weight: bold;
@@ -223,15 +232,50 @@ address aria-label {
 
 /* MEDIA QUERY (medium) */
 @media screen and (min-width: 600px){
-	
+	.offerings {
+		grid-template-columns: 1fr 1fr;
+	} 
+
+	.artisan {
+		grid-column: 1;
+	}
+
+	.monthly-basket {
+		grid-column: 1 / -1;
+	}
+
+	.gallery ul {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 /* MEDIA QUERY (large) */
 @media screen and (min-width: 900px){
-	
+	.offerings {
+		grid-template-columns: 1fr 1fr;
+	} 
+
+	.artisan {
+		grid-column: 1;
+	}
+
+	.monthly-basket {
+		grid-column: 1 / -1;
+	}
+
+	.gallery ul {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 /* MEDIA QUERY (xl) */
 @media screen and (min-width: 1200px){
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 
+	.gallery ul {
+		grid-template-columns: repeat(5, 1fr);
+	}
 }
