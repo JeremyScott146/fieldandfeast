@@ -65,11 +65,6 @@ table {
 
 /* GLOBAL STYLES (mobile first/small) */
 
-* {
-	margin: 0;
-	padding: 0;
-}
-
 html {
 	scroll-behavior: smooth;
 }
@@ -102,7 +97,7 @@ header img {
 .tag {
 	margin: 1rem 0 1rem;
 	font-style: italic;
-	font-size: 0.85rem;
+	font-size: 0.9rem;
 }
 
 h1 {
@@ -113,16 +108,17 @@ h1 {
 /* main nav */
 nav {
 	background-color: var(--champagne-gold);
+	padding: 0.5rem;
 }
 
 nav ul {
-	list-style: none;
-	color: var(--dark-charcoal);
+	display: flex;
+	justify-content: space-around;
+	gap: 3rem;
 }
 
 nav li {
-	display: inline-block;
-	margin: 0.75rem;
+	display: inline;
 }
 
 nav a {
@@ -136,14 +132,89 @@ nav a {
 
 section {
 	background-color: var(--soft-white);
-	margin: 2rem;
+	margin: 2rem none;
+	padding: 2rem 1rem;
 	color: var(--dark-charcoal);
+	border-bottom: 2px solid var(--champagne-gold);
 }
 
+h2 {
+	color: var(--midnight-blue);
+	font-size: 1.8rem;
+}
 
+h3 {
+	color: var(--soft-white);
+	font-size: 1.4rem;
+	font-weight: bold;
+}
 
+.offerings {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+}
 
+article {
+	background-color: var(--olive-green);
+	padding: 1rem;
+	border-radius: 6px;
+	color: var(--soft-white);
+	box-shadow: 0 4px 6px var(--dark-charcoal);
+}
 
+article ul {
+	list-style: inside;
+}
+
+/* gallery */
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	margin: 1rem none;
+}
+
+.gallery img {
+	border-radius: 6px;
+}
+
+.gallery figcaption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.85rem;
+	margin: 0.5rem;
+}
+
+.gallery a {
+	display: block;
+	background-color: var(--olive-green);
+	color: var(--linen);
+	text-align: center;
+	padding: 0.65rem;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* footer */
+
+footer {
+	background-color: var(--soft-white);
+	margin: 1rem none;
+}
+address {
+	text-align: center;
+}
+
+address a {
+	color: var(--soft-white);
+}
+
+address aria-label {
+	text-decoration: none;
+	color: var(--champagne-gold);
+}
 
 
 
